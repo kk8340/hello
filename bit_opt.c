@@ -12,26 +12,26 @@ void clearByteBit(unsigned char *byte,unsigned char n)
 /*强制设置某一位*/
 void setByteBit(unsigned char *byte,unsigned char n,unsigned char value)
 {
-	*byte^=(*byte&(bit_site[n])) ^ (value<<n);
+   *byte^=(*byte&(bit_site[n])) ^ (value<<n);
 }
 /*读取某一位*/
 unsigned char readByteBit(unsigned char byte,unsigned char n)
 {
-  return (((byte>>n)&(0x01))==1);
+   return (((byte>>n)&(0x01))==1);
 }
 /*取反某一位*/
 void cpByteBit(unsigned char *byte,unsigned char n)
 {
-	 unsigned char rxbit=readByteBit(*byte,n);
-	 setByteBit(byte,n,((~rxbit)&0x01));
+   unsigned char rxbit=readByteBit(*byte,n);
+   setByteBit(byte,n,((~rxbit)&0x01));
 }
 
 /*显示一字节位*/
 void showByteBit(unsigned char byte)
 {
-	unsigned char i=0;
-		for(i=0;i<8;i++)
-		{
-		 printf("%d",readByteBit(byte,7-i));
-		}
+   unsigned char i=0;
+   for(i=0;i<8;i++)
+   {
+     printf("%d",readByteBit(byte,7-i));
+   }
 }
