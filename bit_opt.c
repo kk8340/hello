@@ -1,6 +1,14 @@
 #include "bit_opt.h"
 #include "stdio.h"
-	
+
+//typedef volatile unsigned char  vu8;
+//typedef volatile unsigned short vu16;
+//typedef volatile unsigned long  vu32;
+
+//#define BIT_8(adr)  (*((vu8  *) (adr)))
+//#define BIT_16(adr) (*((vu16 *) (adr)))
+//#define BIT_32(adr) (*((vu32 *) (adr)))
+
 //-------------------------bit0-bit1-bit2-bit3-bit4-bit5-bit6-bit7
 unsigned char bit_site[]={0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80}; 
 
